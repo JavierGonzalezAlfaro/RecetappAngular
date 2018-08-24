@@ -1,0 +1,43 @@
+.icon-meat {
+  background-image: url("../../assets/icons/categories/steak.svg");
+}
+
+.icon-fish {
+  background-image: url("../../assets/icons/categories/fish.svg");
+}
+
+.icon-dessert {
+  background-image: url("../../assets/icons/categories/cupcake.svg");
+}
+
+.icon-chicken {
+  background-image: url("../../assets/icons/categories/meat.svg");
+}
+
+.icon-pasta {
+  background-image: url("../../assets/icons/categories/spaguetti.svg");
+}
+
+.icon-snack {
+  background-image: url("../../assets/icons/categories/pizza.svg");
+}
+
+.icon-rice {
+  background-image: url("../../assets/icons/categories/rice.svg");
+}
+
+.icon-vegetable {
+  background-image: url("../../assets/icons/categories/salad.svg");
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+
+li.nav-item {
+  display: flex;
+}
