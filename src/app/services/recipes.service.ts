@@ -14,7 +14,9 @@ export class RecipesService {
       preparation_time: 50,
       badges: [],
       category: 'Snacks',
-      stars: 2
+      stars: 2,
+      ingredients: ['Fajitas', 'Tomate', 'Lechuga', 'Pollo'],
+      steps: ['Cortar la carne en trocitos', 'Calentar la tortilla en la sartén 2 min']
     },
     {
       title: 'Fajitas Mexicanas',
@@ -24,7 +26,9 @@ export class RecipesService {
       preparation_time: 50,
       badges: [],
       category: 'Snacks',
-      stars: 2
+      stars: 2,
+      ingredients: [],
+      steps: []
     },
     {
       title: 'Hamburguesa de tofu con anacardos',
@@ -34,7 +38,9 @@ export class RecipesService {
       preparation_time: 30,
       badges: ['Rápido'],
       category: 'Carnes',
-      stars: 4
+      stars: 4,
+      ingredients: [],
+      steps: []
     },
     {
       title: 'Solomillo de cerdo con esparragos y papas',
@@ -44,7 +50,9 @@ export class RecipesService {
       preparation_time: 45,
       badges: ['Vegano', 'Japonés'],
       category: 'Carnes',
-      stars: 4.2
+      stars: 4.2,
+      ingredients: [],
+      steps: []
     },
     {
       title: 'Pescaito d\'la mama rico rico',
@@ -54,7 +62,9 @@ export class RecipesService {
       preparation_time: 50,
       badges: ['Mama'],
       category: 'Pescado',
-      stars: 2.5
+      stars: 2.5,
+      ingredients: [],
+      steps: []
     }
   ];
 
@@ -64,6 +74,10 @@ export class RecipesService {
 
   getRecipes() {
     return this.recipes;
+  }
+
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 }
 
@@ -76,6 +90,8 @@ export interface Recipe {
   badges: string[];
   category: string;
   stars: number;
+  ingredients: string[];
+  steps: string[];
 }
 
 

@@ -1,8 +1,9 @@
 <div class="card-deck">
 
   <div class="row">
-    <div class="col-md-4" *ngFor="let recipe of recipes">
-      <div class="card">
+    <div class="col-md-4 animated fadeIn" *ngFor="let recipe of recipes; let i = index">
+
+      <div class="card" (click)="showRecipe(i)">
         <img class="card-img-top"
              [src]="recipe.image"
              [alt]="recipe.title">
@@ -26,6 +27,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>
