@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {endWith} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -69,15 +70,28 @@ export class RecipesService {
   ];
 
   constructor() {
-    console.log('listo para usar');
   }
 
-  getRecipes() {
+  getRecipes(): Recipe[] {
     return this.recipes;
   }
 
-  getRecipe(index: number) {
+  getRecipe(index: number): Recipe {
     return this.recipes[index];
+  }
+
+  searchRecipe(term: string): Recipe[] {
+    const foundedRecipes: Recipe[] = [];
+    term = term.toLowerCase();
+
+    for (const recipe of this.recipes) {
+      const recipeTitle = recipe.title.toLowerCase();
+      if (recipeTitle.indexOf(term) >= 0) {
+        foundedRecipes.push(recipe);
+      }
+    }
+
+    return foundedRecipes;
   }
 }
 

@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@media (min-width: 992px) {
+  .sidebar {
+    height: calc(100vh - 59px);
+    padding-top: 1.5rem;
+  }
+}
+
+.card-footer {
+  color: #6c757d;
+}
+
+.vr {
+  border-right: #6c757d solid 1px;
+  display: inline;
+  margin: 0 10px;
+}

@@ -11,6 +11,8 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipeModalComponent } from './recipe-modal/recipe-modal.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SearchComponent } from './search/search.component';
+import { RecipeItemComponent } from './recipe-item/recipe-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AppRoutingModule } from './app-routing.module';
     AboutComponent,
     RecipesComponent,
     RecipeDetailComponent,
-    RecipeModalComponent
+    RecipeModalComponent,
+    SearchComponent,
+    RecipeItemComponent
   ],
   imports: [
     BrowserModule,

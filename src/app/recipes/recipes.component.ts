@@ -21,8 +21,4 @@ export class RecipesComponent implements OnInit {
     this.recipes = this.recipesService.getRecipes();
   }
 
-  showRecipe(index: number) {
-    this.router.navigate(['/recipe', index]);
-  }
-
 }

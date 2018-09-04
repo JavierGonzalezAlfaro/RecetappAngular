@@ -1,33 +1,9 @@
 <div class="card-deck">
 
-  <div class="row">
-    <div class="col-md-4 animated fadeIn" *ngFor="let recipe of recipes; let i = index">
+  <div class="row w-100">
 
-      <div class="card" (click)="showRecipe(i)">
-        <img class="card-img-top"
-             [src]="recipe.image"
-             [alt]="recipe.title">
-        <div class="card-body">
-          <h5 class="card-title">{{recipe.title}}</h5>
-          <p class="card-text">{{recipe.description}}</p>
-          <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </p>
-        </div>
-        <div class="card-footer">
-          <div class="row">
-            <div class="col-10">
-              <i class="icon-user"> {{recipe.serves}}</i>
-              <div class="vr"></div>
-              <i class="icon-clock"> {{recipe.preparation_time}} min</i>
-            </div>
-            <div class="col-sm text-right">
-              <i class="icon-heart"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <app-recipe-item class="col-md-4 animated fadeIn" [recipe]="recipe" [index]="i" *ngFor="let recipe of recipes; let i = index"></app-recipe-item>
+    
   </div>
+
 </div>
