@@ -1,0 +1,20 @@
+<h1>Buscando: {{searchTerm}}</h1>
+<hr>
+
+<div class="row" *ngIf="recipes.length <= 0">
+  <div class="col-md-12">
+    <div class="alert alert-info">
+      No existe ningún resultado para: {{searchTerm}}
+    </div>
+  </div>
+</div>
+
+<div class="card-deck" *ngIf="recipes.length > 0">
+
+  <div class="row w-100">
+
+    <app-recipe-item class="col-md-4 animated fadeIn" [recipe]="recipe" [index]="i" *ngFor="let recipe of recipes; let i = index"></app-recipe-item>
+
+  </div>
+
+</div>

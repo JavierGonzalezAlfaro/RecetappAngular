@@ -1,0 +1,29 @@
+<div class="card" (click)="showRecipe()">
+  <img class="card-img-top"
+       [src]="recipe.image"
+       [alt]="recipe.title">
+  <div class="card-body">
+    <span class="badge badge-danger" *ngFor="let badge of recipe.badges">{{badge}}</span>
+    <h5 class="card-title">{{recipe.title}}</h5>
+    <p class="card-text">{{recipe.description}}</p>
+    <p class="card-text">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </p>
+  </div>
+  <div class="card-footer">
+    <div class="row">
+      <div class="col-10">
+        <i class="icon-user"> {{recipe.serves}}</i>
+        <div class="vr"></div>
+        <i class="icon-clock"> {{recipe.preparation_time}} min</i>
+        <div class="vr"></div>
+        <small class="text-muted"><i class="icon-star"> {{recipe.stars}}</i></small>
+      </div>
+
+      <div class="col-sm text-right">
+        <i class="icon-heart"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
